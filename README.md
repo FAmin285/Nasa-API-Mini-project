@@ -13,7 +13,7 @@ Install dependencies:
 pip install -r requirements.txt
 
 Create a .env file:
-MY_API_KEY=your_api_key_here
+MY_API_KEY= *insert your api key
 
 Run the program:
 python main.py
