@@ -13,7 +13,13 @@ Install dependencies:
 pip install -r requirements.txt
 
 Create a .env file:
-MY_API_KEY= *insert your api key
+MY_API_KEY=your_api_key
 
 Run the program:
 python main.py
+
+## Notes
+
+- The API key is stored securely using a `.env` file.
+- The program uses `os.getenv()` to access the API key.
+- Do NOT upload your `.env` file to GitHub.
