@@ -9,7 +9,7 @@ API_KEY = os.getenv("MY_API_KEY")
 if not API_KEY:
     raise ValueError("API key not found. Did you copy .env.example to .env?")
 
-# Using NASA's webiste to gain information
+# Using NASA's website to gain information
 BASE_URL = "https://api.nasa.gov"
 
 
@@ -18,7 +18,7 @@ def divider(label):
 
 
 # ── Call 1: APOD ───────────────────────────────
-# Retrieves the Astronomy Picture of the Day (title, date, explanation) from NASA's APOD AI
+# Retrieves the Astronomy Picture of the Day (title, date, explanation) from NASA's APOD API
 def call_one_get():
     divider("CALL 1 — APOD (Astronomy Picture of the Day)")
 
