@@ -9,18 +9,16 @@ API_KEY = os.getenv("MY_API_KEY")
 if not API_KEY:
     raise ValueError("API key not found. Did you copy .env.example to .env?")
 
-# TODO: Replace with your API's base URL
+# Using NASA's webiste to gain information
 BASE_URL = "https://api.nasa.gov"
 
-# update or extend per call if your API requires it
 
 def divider(label):
     print(f"\n{'=' * 50}\n{label}\n{'=' * 50}")
 
 
-# ── Call 1: GET request ───────────────────────────────────
-# Use for retrieving data without a request body.
-# TODO: Update url and params.
+# ── Call 1: APOD ───────────────────────────────
+# Retrieves the Astronomy Picture of the Day (title, date, explanation) from NASA's APOD AI
 def call_one_get():
     divider("CALL 1 — APOD (Astronomy Picture of the Day)")
 
@@ -38,9 +36,8 @@ def call_one_get():
         print(f"[ERROR] {response.status_code}: {response.text}")
 
 
-# ── Call 2: POST request ──────────────────────────────────
-# Use for sending data to the API (e.g., a prompt or input text).
-# TODO: Update url and payload fields.
+# ── Call 2: EPIC Earth Data ───────────────────
+# Retrieves satellite image metadata from NASA's EPIC API
 def call_two_get():
     divider("CALL 2 — EPIC Earth Image Data")
 
@@ -64,9 +61,8 @@ def call_two_get():
         print(f"[ERROR] {response.status_code}: {response.text}")
 
 
-# ── Call 3: Parameterized POST ────────────────────────────
-# Same as Call 2 but accepts dynamic input to show varied output.
-# TODO: Update url and payload fields.
+# ── Call 3: Asteroid Data ─────────────────────
+# Call NASA NEO API to get the number of near-earth objects for a specific date
 def call_three_parameterized(user_input: str):
     divider(f"CALL 3 — Asteroids for {user_input}")
 
